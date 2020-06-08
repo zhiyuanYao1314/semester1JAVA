@@ -1,0 +1,1396 @@
+============================================
+vis/result.rtx
+03:13:38_Friday_31_May_2019
+============================================
+Feedback:Your program ("Nimsys.java") is submitted successfully. :) 
+Your program is compiled successfully :) 
+The following are few simple tests and their results.
+However, it's your responsibility to test your program more extensively!
+Note that the program input (including carriage returns) is not displayed
+with the program output. The two streams are displayed separately.
+==================Test 1====================
+Test for input file: in1
+removeplayer
+y
+createplayer lskywalker,Skywalker,Luke
+addplayer lskywalker
+addplayer lskywalker,Skywalker,Luke
+addplayer lskywalker,Skywalker,Luke
+removeplayer
+y
+addplayer george,Washington,George
+addplayer jadams,Adams,John
+startgame 4,2,george,jadams
+4
+1
+1
+1
+1
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$'createplayer' is not a valid command.					$'createplayer' is not a valid command.
+
+$Incorrect number of arguments supplied to command.			$Incorrect number of arguments supplied to command.
+
+$									$
+$The player already exists.						$The player already exists.
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+$									$
+Initial stone count: 4							Initial stone count: 4
+Maximum stone removal: 2						Maximum stone removal: 2
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+4 stones left: * * * *							4 stones left: * * * *
+George's turn - remove how many?					George's turn - remove how many?
+
+Invalid move. You must remove between 1 and 2 stones.			Invalid move. You must remove between 1 and 2 stones.
+
+4 stones left: * * * *							4 stones left: * * * *
+George's turn - remove how many?					George's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+John's turn - remove how many?						John's turn - remove how many?
+
+2 stones left: * *							2 stones left: * *
+George's turn - remove how many?					George's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+John's turn - remove how many?						John's turn - remove how many?
+
+Game Over								Game Over
+George Washington wins!							George Washington wins!
+
+$									$
+
+Your results seem to be CORRECT.  :)
+==================Test 2====================
+Test for input file: in2
+displayplayer
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$george,George,Washington,1 games,1 wins				$george,George,Washington,1 games,1 wins
+jadams,John,Adams,1 games,0 wins					jadams,John,Adams,1 games,0 wins
+
+$100% | 01 games | George Washington					$100% | 01 games | George Washington
+0%   | 01 games | John Adams						0%   | 01 games | John Adams
+
+$									$
+
+Your results seem to be CORRECT.  :)
+==================Test 3====================
+Test for input file: in3
+removeplayer
+y
+addplayer lskywalker,Skywalker,Luke
+addaiplayer artoo,D2,R2
+startgame 30,5,artoo,lskywalker
+1
+2
+3
+4
+1
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+$									$
+Initial stone count: 30							Initial stone count: 30
+Maximum stone removal: 5						Maximum stone removal: 5
+Player 1: R2 D2								Player 1: R2 D2
+Player 2: Luke Skywalker						Player 2: Luke Skywalker
+
+30 stones left: * * * * * * * * * * * * * * * * * * * * * * * * * * 	30 stones left: * * * * * * * * * * * * * * * * * * * * * * * * * * 
+R2's turn - remove how many?						R2's turn - remove how many?
+
+25 stones left: * * * * * * * * * * * * * * * * * * * * * * * * *	25 stones left: * * * * * * * * * * * * * * * * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+24 stones left: * * * * * * * * * * * * * * * * * * * * * * * *		24 stones left: * * * * * * * * * * * * * * * * * * * * * * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+19 stones left: * * * * * * * * * * * * * * * * * * *			19 stones left: * * * * * * * * * * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+17 stones left: * * * * * * * * * * * * * * * * *			17 stones left: * * * * * * * * * * * * * * * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+13 stones left: * * * * * * * * * * * * *				13 stones left: * * * * * * * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+10 stones left: * * * * * * * * * *					10 stones left: * * * * * * * * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+7 stones left: * * * * * * *						7 stones left: * * * * * * *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+3 stones left: * * *							3 stones left: * * *
+R2's turn - remove how many?						R2's turn - remove how many?
+
+1 stones left: *							1 stones left: *
+Luke's turn - remove how many?						Luke's turn - remove how many?
+
+Game Over								Game Over
+R2 D2 wins!								R2 D2 wins!
+
+$100% | 01 games | R2 D2						$100% | 01 games | R2 D2
+0%   | 01 games | Luke Skywalker					0%   | 01 games | Luke Skywalker
+
+$									$
+
+Your results seem to be CORRECT.  :)
+==============================================
+Start Bonus test
+====================BONUS=====================
+This test is for the implmentation of the advanced Nim game.
+Test for input file: in_advanced
+removeplayer
+y
+addplayer george,Washington,George
+addplayer jadams,Adams,John
+addplayer tom,Jefferson,Thomas
+addplayer jmadison,Madison,James
+startadvancedgame 5,george,jadams
+2 2
+4 1
+1 1
+5 1
+startadvancedgame 7,george,jadams
+4 1
+2 2
+6 2
+1 1
+5 1
+startadvancedgame 9,jadams,tom
+8 2
+4 1
+3 1
+5 1
+1 1
+6 1
+2 1
+7 1
+startadvancedgame 11,tom,jmadison
+2 2
+19 2
+10 2
+5 2
+8 2
+4 1
+1 1
+7 1
+rankings
+exit
+
+Expected results:                                                       Your results:
+Welcome to Nim								Welcome to Nim
+
+$Are you sure you want to remove all players? (y/n)			$Are you sure you want to remove all players? (y/n)
+
+$									$
+$									$
+$									$
+$									$
+$									$
+Initial stone count: 5							Initial stone count: 5
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*>				Stones display: <1,*> <2,*> <3,*> <4,*> <5,*>
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+5 stones left: <1,*> <2,*> <3,*> <4,*> <5,*>				5 stones left: <1,*> <2,*> <3,*> <4,*> <5,*>
+George's turn - which to remove?					George's turn - which to remove?
+
+3 stones left: <1,*> <2,x> <3,x> <4,*> <5,*>				3 stones left: <1,*> <2,x> <3,x> <4,*> <5,*>
+John's turn - which to remove?						John's turn - which to remove?
+
+2 stones left: <1,*> <2,x> <3,x> <4,x> <5,*>				2 stones left: <1,*> <2,x> <3,x> <4,x> <5,*>
+George's turn - which to remove?					George's turn - which to remove?
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,*>				1 stones left: <1,x> <2,x> <3,x> <4,x> <5,*>
+John's turn - which to remove?						John's turn - which to remove?
+
+Game Over								Game Over
+John Adams wins!							John Adams wins!
+
+$									$
+Initial stone count: 7							Initial stone count: 7
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*>		Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*>
+Player 1: George Washington						Player 1: George Washington
+Player 2: John Adams							Player 2: John Adams
+
+7 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*>		7 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*>
+George's turn - which to remove?					George's turn - which to remove?
+
+6 stones left: <1,*> <2,*> <3,*> <4,x> <5,*> <6,*> <7,*>		6 stones left: <1,*> <2,*> <3,*> <4,x> <5,*> <6,*> <7,*>
+John's turn - which to remove?						John's turn - which to remove?
+
+4 stones left: <1,*> <2,x> <3,x> <4,x> <5,*> <6,*> <7,*>		4 stones left: <1,*> <2,x> <3,x> <4,x> <5,*> <6,*> <7,*>
+George's turn - which to remove?					George's turn - which to remove?
+
+2 stones left: <1,*> <2,x> <3,x> <4,x> <5,*> <6,x> <7,x>		2 stones left: <1,*> <2,x> <3,x> <4,x> <5,*> <6,x> <7,x>
+John's turn - which to remove?						John's turn - which to remove?
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,*> <6,x> <7,x>		1 stones left: <1,x> <2,x> <3,x> <4,x> <5,*> <6,x> <7,x>
+George's turn - which to remove?					George's turn - which to remove?
+
+Game Over								Game Over
+George Washington wins!							George Washington wins!
+
+$									$
+Initial stone count: 9							Initial stone count: 9
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*	Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*
+Player 1: John Adams							Player 1: John Adams
+Player 2: Thomas Jefferson						Player 2: Thomas Jefferson
+
+9 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>	9 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>
+John's turn - which to remove?						John's turn - which to remove?
+
+7 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,x> <9,x>	7 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,x> <9,x>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+6 stones left: <1,*> <2,*> <3,*> <4,x> <5,*> <6,*> <7,*> <8,x> <9,x>	6 stones left: <1,*> <2,*> <3,*> <4,x> <5,*> <6,*> <7,*> <8,x> <9,x>
+John's turn - which to remove?						John's turn - which to remove?
+
+5 stones left: <1,*> <2,*> <3,x> <4,x> <5,*> <6,*> <7,*> <8,x> <9,x>	5 stones left: <1,*> <2,*> <3,x> <4,x> <5,*> <6,*> <7,*> <8,x> <9,x>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+4 stones left: <1,*> <2,*> <3,x> <4,x> <5,x> <6,*> <7,*> <8,x> <9,x>	4 stones left: <1,*> <2,*> <3,x> <4,x> <5,x> <6,*> <7,*> <8,x> <9,x>
+John's turn - which to remove?						John's turn - which to remove?
+
+3 stones left: <1,x> <2,*> <3,x> <4,x> <5,x> <6,*> <7,*> <8,x> <9,x>	3 stones left: <1,x> <2,*> <3,x> <4,x> <5,x> <6,*> <7,*> <8,x> <9,x>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+2 stones left: <1,x> <2,*> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>	2 stones left: <1,x> <2,*> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>
+John's turn - which to remove?						John's turn - which to remove?
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>	1 stones left: <1,x> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+Game Over								Game Over
+Thomas Jefferson wins!							Thomas Jefferson wins!
+
+$									$
+Initial stone count: 11							Initial stone count: 11
+Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*	Stones display: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*
+Player 1: Thomas Jefferson						Player 1: Thomas Jefferson
+Player 2: James Madison							Player 2: James Madison
+
+11 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*	11 stones left: <1,*> <2,*> <3,*> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+9 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>	9 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>
+James's turn - which to remove?						James's turn - which to remove?
+
+Invalid move.								Invalid move.
+
+9 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>	9 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>
+James's turn - which to remove?						James's turn - which to remove?
+
+7 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>	7 stones left: <1,*> <2,x> <3,x> <4,*> <5,*> <6,*> <7,*> <8,*> <9,*>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+5 stones left: <1,*> <2,x> <3,x> <4,*> <5,x> <6,x> <7,*> <8,*> <9,*>	5 stones left: <1,*> <2,x> <3,x> <4,*> <5,x> <6,x> <7,*> <8,*> <9,*>
+James's turn - which to remove?						James's turn - which to remove?
+
+3 stones left: <1,*> <2,x> <3,x> <4,*> <5,x> <6,x> <7,*> <8,x> <9,x>	3 stones left: <1,*> <2,x> <3,x> <4,*> <5,x> <6,x> <7,*> <8,x> <9,x>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+2 stones left: <1,*> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>	2 stones left: <1,*> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>
+James's turn - which to remove?						James's turn - which to remove?
+
+1 stones left: <1,x> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>	1 stones left: <1,x> <2,x> <3,x> <4,x> <5,x> <6,x> <7,*> <8,x> <9,x>
+Thomas's turn - which to remove?					Thomas's turn - which to remove?
+
+Game Over								Game Over
+Thomas Jefferson wins!							Thomas Jefferson wins!
+
+$100% | 02 games | Thomas Jefferson					$100% | 02 games | Thomas Jefferson
+50%  | 02 games | George Washington					50%  | 02 games | George Washington
+33%  | 03 games | John Adams						33%  | 03 games | John Adams
+0%   | 01 games | James Madison						0%   | 01 games | James Madison
+
+$									$
+
+Your results seem to be CORRECT.  :)
+====================BONUS=====================
+Wining ratio if your AI player moves first, dummy rival player
+Expected: 100% 	Yours: 100%.
+
+Wining ratio if your AI player moves first, oracle rival player
+Expected: 100% 	Yours: 100%.
+
+Wining ratio if your AI player moves second, dummy rival player
+Expected: 100% 	Yours: 100%.
+
+This test is for the victory guaranteed strategy for the advanced Nim game
+Your solution is correct if it outputs 100 percent winning ratios in all cases
+============================================
+src/InvalidCommandException.java
+03:13:31_Friday_31_May_2019
+============================================
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: when the player input invalid arguments,
+ *           one instance of InvalidCommandException will be thrown.
+ * version:1.3
+ */
+public class InvalidCommandException extends Exception {
+
+    public InvalidCommandException() {
+    }
+
+    public InvalidCommandException(String message) {
+        super(message);
+    }
+}
+============================================
+src/NimPlayer.java
+03:13:32_Friday_31_May_2019
+============================================
+import java.util.Scanner;
+
+/**
+ * Author: Zhiyuan Yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: the abstract class is implemented
+ *           by NimAIPlayer and NimHumanPlayer
+ *           each player has the given name,
+ *           family name, and unique username.
+ *           this class record players' game statistics
+ *           including the number of games played and
+ *           the number of games won.
+ * version:1.3
+ */
+
+public abstract class NimPlayer {
+    // unique username of the player
+    protected String username;
+    // given name of player
+    protected String givenName;
+    // family name of player
+    protected String familyName;
+    // the number of games player played
+    protected int numberOfGamesPlayed;
+    // the number of games  player won
+    protected int numberOfGamesWon;
+
+    /**
+     * Determine whether two players have the same user name
+     * @param anotherPlayer another player
+     * @return true means they have same username, false means they have different username
+     */
+    public boolean equals(NimPlayer anotherPlayer){
+        if (anotherPlayer == null || !this.getUsername().equals(anotherPlayer.getUsername()))
+            return false;
+        return true;
+    }
+
+    /**
+     *  players remove stones
+     * @param keyboard players input the number of stones they remove
+     * @return the number of stones player remove
+     */
+    public abstract int removeStone(Scanner keyboard,int currentStone, int upperBound);
+
+    /**
+     * players move stones for advanced game
+     * @param keyboard human players input
+     * @param available available stones
+     * @param lastMove the stones that last player move
+     * @return the stones that current player move
+     * @throws InvalidMoveException invalid move exception
+     */
+    public abstract String advancedMove
+            (Scanner keyboard,boolean[] available, String lastMove)
+            throws InvalidMoveException;
+
+    public void setGivenName(String givenName) {
+        this.givenName = givenName;
+    }
+
+    public void setFamilyName(String familyName) {
+        this.familyName = familyName;
+    }
+
+    public void setNumberOfGamesPlayed(int numberOfGamesPlayed) {
+        this.numberOfGamesPlayed = numberOfGamesPlayed;
+    }
+
+    public void setNumberOfGamesWon(int numberOfGamesWon) {
+        this.numberOfGamesWon = numberOfGamesWon;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getGivenName() {
+        return givenName;
+    }
+
+    public String getFamilyName() {
+        return familyName;
+    }
+
+    public int getNumberOfGamesPlayed() {
+        return numberOfGamesPlayed;
+    }
+
+    public int getNumberOfGamesWon() {
+        return numberOfGamesWon;
+    }
+}============================================
+src/InvalidNumberOfArgumentsException.java
+03:13:31_Friday_31_May_2019
+============================================
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: when the player input invalid number of arguments,
+ *           one instance of InvalidNumberOfArgumentsException will be thrown.
+ * version:1.3
+ */
+public class InvalidNumberOfArgumentsException extends Exception {
+    public InvalidNumberOfArgumentsException() {
+    }
+
+    public InvalidNumberOfArgumentsException(String message) {
+        super(message);
+    }
+}
+============================================
+src/NimAIPlayer.java
+03:13:31_Friday_31_May_2019
+============================================
+import java.util.Scanner;
+
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: This player is an AI player who extends the NimPlayer abstract class
+ *           and implements the Testable interface, implements the removeStone method
+ *           and the advancedMove method to ensure the greatest possible victory.
+ * version:1.3
+ */
+public class NimAIPlayer extends NimPlayer implements Testable{
+    // constructor
+    public NimAIPlayer(){}
+
+    //constructor
+    public NimAIPlayer(String username, String familyName, String givenName) {
+        this.username = username;
+        this.givenName = givenName;
+        this.familyName = familyName;
+    }
+
+    /*
+    The AI player moves the stones so that
+    the number of stones remaining is k(upperBound+1)+1,
+    if the AI player cannot make sure that,only move one stone
+    so that the possibility of the other player making mistake
+    larger.
+     */
+    @Override
+    public int removeStone(Scanner keyboard, int currentStone, int upperBound) {
+        for (int i =1;i<=upperBound;i++){
+            if ((currentStone-i-1)%(upperBound+1)==0)
+                return i;
+        }
+        return 1;
+    }
+
+    /**
+     * the AI player try to move stones to meet the conditions of victory.
+     * implement the method in abstract class NimPlayer
+     * @param keyboard human players input
+     * @param available available stones
+     * @param lastMove the stones that last player move
+     * @return the stones that current player move
+     */
+    @Override
+    public String advancedMove(Scanner keyboard, boolean[] available, String lastMove) {
+        return advancedMove(available,lastMove);
+    }
+
+    /**
+     * the AI player try to move stones to meet the conditions of victory.
+     * implement the method in interface Testable
+     * @param available the stones which are available
+     * @param lastMove the stones that last player move
+     * @return the stones that current player move
+     */
+    @Override
+    public String advancedMove(boolean[] available, String lastMove) {
+        /*
+         try to remove one stone to make sure that the
+         remaining stone meet the conditions of victory
+          */
+        for (int i=0;i<available.length;i++){
+            if (available[i]){
+                available[i] = false;
+                if (isGuaranteeWin(available))
+                    return (i+1)+" "+1;
+                else
+                    available[i] = true;
+            }
+        }
+        /*
+        if removing one stone cannot meet the conditions,
+        try to remove two stone to meet the condition of victory
+         */
+        for (int i=0;i<available.length-1;i++){
+            if (available[i] && available[i+1]){
+                available[i] = false;
+                available[i+1] = false;
+                if (isGuaranteeWin(available))
+                    return (i+1)+" "+2;
+                else {
+                    available[i] = true;
+                    available[i + 1] = true;
+                }
+            }
+        }
+        /*
+        if cannot, just remove one stone so that
+        the possibility of the other player making mistake larger.
+         */
+        for (int i=0;i<available.length;i++){
+            if (available[i]){
+                available[i] = false;
+            }
+            return (i+1)+" "+1;
+        }
+        return "";
+    }
+
+    /*
+     The condition for victory guaranteed strategy.
+      */
+    private boolean isGuaranteeWin(boolean[] available) {
+        // transfer the boolean[] to stringBuilder
+        StringBuilder s = new StringBuilder();
+        for (boolean ele: available )
+            s.append(ele);
+        // calculate the number of fragments including different number of stones.
+        int[] fragments = new int[available.length];
+        String[] ss = s.toString().split("false");
+        for (String s1 : ss) {
+            if (s1.contains("true"))
+                fragments[s1.length() / 4]++;
+        }
+        /*
+         if all this fragments including different number of stones
+         are even, AI player can guarantee victory.
+          */
+        for (int i : fragments) {
+            if (i % 2 != 0)
+                return false;
+        }
+        return true;
+    }
+}============================================
+src/Testable.java
+03:13:33_Friday_31_May_2019
+============================================
+/*
+	Testable.java
+	
+	This class is provided for auto-testing purpose. Do NOT change it. 
+	
+*/
+
+public interface Testable {
+	public String advancedMove(boolean[] available, String lastMove);
+}
+============================================
+src/Nimsys.java
+03:13:32_Friday_31_May_2019
+============================================
+import java.io.*;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: there are up to 100 players who can be stored in this Nimsys,
+ *           user can add player, remove player, edit player, reset player statistics,
+ *           display player, ranking players, and
+ *           start one game or advanced game.
+ * version:1.3
+ */
+public class Nimsys {
+
+    // keyboard is used for player input information.
+    private Scanner keyboard;
+    // all players
+    private NimPlayer[] players;
+    // the command which user input
+    private String command;
+    // how many players this nimSys has currently
+    private int playersSize;
+    // the max number of players in this Nimsys
+    private final int MAX_NUMBER_PLAYERS = 100;
+
+    public Nimsys() {
+        this.players = new NimPlayer[MAX_NUMBER_PLAYERS];
+        keyboard=new Scanner(System.in);
+        playersSize=0; // initialize 0.
+    }
+
+    public static void main(String[] args) {
+        Nimsys nimsys = new Nimsys();
+        nimsys.load();
+        System.out.println("Welcome to Nim\n");
+        while(true){
+            System.out.print("$");
+            nimsys.command = nimsys.keyboard.nextLine();
+            // catch all exceptions. Print and return it to the user.
+            try {
+                nimsys.executeCommand();
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+            System.out.println();
+        }
+    }
+
+    /**
+     * when starting this system, load information from disk.
+     */
+    private void load(){
+        File playersData = new File("players.dat");
+        FileInputStream fis=null;
+        BufferedReader reader = null;
+        try {
+            fis = new FileInputStream(playersData);
+            reader = new BufferedReader(new InputStreamReader(fis));
+            String line;
+            int i=0;
+            while ((line = reader.readLine()) !=null){
+                String[] playersDetails =line.split(" ");
+                if (playersDetails[0].equals("y")){
+                    players[i] = new NimAIPlayer(playersDetails[1],
+                            playersDetails[2],playersDetails[3]);
+                    players[i].setNumberOfGamesWon(Integer.parseInt(playersDetails[4]));
+                    players[i].setNumberOfGamesPlayed(Integer.parseInt(playersDetails[5]));
+                }else{
+                    players[i] = new NimHumanPlayer(playersDetails[1],
+                            playersDetails[2],playersDetails[3]);
+                    players[i].setNumberOfGamesWon(Integer.parseInt(playersDetails[4]));
+                    players[i].setNumberOfGamesPlayed(Integer.parseInt(playersDetails[5]));
+                }
+                i++;
+            }
+            this.playersSize =i;
+        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (fis != null){
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /**
+     * Select the appropriate method based on the user's command
+     * @throws InvalidNumberOfArgumentsException invalid number of arguments exception
+     * @throws InvalidCommandException invalid comment exception
+     */
+    private void executeCommand()
+            throws InvalidNumberOfArgumentsException, InvalidCommandException {
+        String[] commands =command.split(" ");
+        if (commands.length>1)
+            command = commands[1];
+        else
+            command = ""; // If there are no parameters
+
+        if (commands[0].equals("addplayer") || commands[0].equals("addaiplayer")){
+            addPlayer(commands[0]);
+        }else if(commands[0].equals("removeplayer")){
+            removePlayer();
+        }else if(commands[0].equals("editplayer")){
+            editPlayer();
+        }else if(commands[0].equals("resetstats")){
+            resetStats();
+        }else if(commands[0].equals("displayplayer")){
+            displayplayer();
+        }else if(commands[0].equals("rankings")){
+            rankings();
+        }else if(commands[0].equals("startgame")){
+            startgGame();
+        }else if(commands[0].equals("startadvancedgame")){
+            startAdvancedGame();
+        }else if(commands[0].equals("exit")){
+            System.out.println();
+            update();
+            System.exit(0);
+        }else {
+            throw new InvalidCommandException("'"+commands[0] +"' is not a valid command.");
+        }
+    }
+
+    /**
+     * When this program exits,
+     * this ﬁle will be updated with new/modiﬁed players.
+     */
+    private void update(){
+        File playersData = new File("players.dat");
+        PrintWriter out = null;
+        try {
+            out = new PrintWriter(playersData);
+            for (int i=0;i<playersSize;i++){
+                if (players[i] instanceof NimAIPlayer){
+                    out.print("y"+" ");
+                }else{
+                    out.print("n"+" ");
+                }
+                out.print(players[i].getUsername()+" ");
+                out.print(players[i].getFamilyName()+" ");
+                out.print(players[i].getGivenName()+" ");
+                out.print(players[i].getNumberOfGamesWon()+" ");
+                out.print(players[i].getNumberOfGamesPlayed());
+                out.println();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            if (out != null){
+                out.close();
+            }
+        }
+    }
+
+
+    /**
+     * add one player
+     * @param comm comment which player input.
+     * @throws InvalidNumberOfArgumentsException invalid number of arguments exception
+     */
+    private void addPlayer(String comm) throws InvalidNumberOfArgumentsException{
+        String[] arguments = command.split(",");
+        if (arguments.length< 3 )
+            throw new InvalidNumberOfArgumentsException
+                    ("Incorrect number of arguments supplied to command.");
+        int playerIndex =findPlayer(arguments[0]);
+        if (playerIndex!=-1){
+            System.out.println("The player already exists.");
+            return;
+        }
+        if (comm.equals("addaiplayer")){
+            players[playersSize]= new NimAIPlayer(arguments[0],arguments[1],arguments[2]);
+        }else{
+            players[playersSize]= new NimHumanPlayer(arguments[0],arguments[1],arguments[2]);
+        }
+        playersSize++;
+    }
+
+    /**
+     * remove one or all players.
+     */
+    private void removePlayer(){
+
+        // remove all players
+        if (command.equals("")){
+            System.out.println("Are you sure you want to remove all players? (y/n)");
+            char answer = keyboard.nextLine().charAt(0);
+            if (answer=='y'){
+                players = new NimPlayer[MAX_NUMBER_PLAYERS];
+                playersSize = 0;
+                return;
+            }
+            return;
+        }
+        // remove one player
+        String userName = command;
+        int playerIndex = findPlayer(userName);
+        if (playerIndex==-1){
+            System.out.println("The player does not exist.");
+            return;
+        }
+        for (int i=playerIndex;i<playersSize;i++) players[i] = players[i + 1];
+        playersSize--;
+    }
+
+    /**
+     *  edit player's family name and given name.
+     * @throws InvalidNumberOfArgumentsException invalid number of arguments exception
+     */
+    private void editPlayer()throws InvalidNumberOfArgumentsException{
+        String[] arguments = command.split(",");
+
+        if (arguments.length< 3 )
+            throw new InvalidNumberOfArgumentsException
+                    ("Incorrect number of arguments supplied to command.");
+
+        int playerIndex =findPlayer(arguments[0]);
+        if (playerIndex==-1){
+            System.out.println("The player does not exist.");
+            return;
+        }
+        players[playerIndex].setFamilyName(arguments[1]);
+        players[playerIndex].setGivenName(arguments[2]);
+    }
+
+    /**
+     * reset one or all players' statistics
+     */
+    private void resetStats(){
+        // reset all players' statistics
+        if (command.equals("")){
+            System.out.println("Are you sure you want to reset all player statistics? (y/n)");
+            char answer = keyboard.nextLine().charAt(0);
+            if (answer=='y'){
+                for (int i=0;i<playersSize;i++){
+                    players[i].setNumberOfGamesPlayed(0);
+                    players[i].setNumberOfGamesWon(0);
+                }
+            }
+            return;
+        }
+        //reset one player' statistics
+        String userName = command;
+        int playerIndex = findPlayer(userName);
+        if (playerIndex==-1){
+            System.out.println("The player does not exist.");
+            return;
+        }
+        players[playerIndex].setNumberOfGamesPlayed(0);
+        players[playerIndex].setNumberOfGamesWon(0);
+    }
+
+    /**
+     * display one or all players information
+     */
+    private void displayplayer(){
+        //display all players
+        if (command.equals("")){
+            NimPlayer[] allPlayers = rankingAlphabetically();
+            for(int i=0;i<playersSize;i++){
+                printPlayer(allPlayers[i]);
+            }
+            return;
+        }
+        // display one player
+        String userName = command;
+        int playerIndex = findPlayer(userName);
+        if (playerIndex==-1){
+            System.out.println("The player does not exist.");
+            return;
+        }
+        printPlayer(players[playerIndex]);
+    }
+
+    /**
+     * print one player information
+     * @param player this player who is printed
+     */
+    private void printPlayer(NimPlayer player){
+        System.out.println(player.getUsername()+","
+                +player.getGivenName()+","
+                +player.getFamilyName()+","
+                +player.getNumberOfGamesPlayed()+" games,"
+                +player.getNumberOfGamesWon()+" wins");
+    }
+
+    /**
+     * Ranking all players
+     */
+    private void rankings(){
+        NimPlayer[] allPlayer = rankingAlphabetically();
+        Arrays.sort(allPlayer, new Comparator<NimPlayer>() {
+            @Override
+            public int compare(NimPlayer o1, NimPlayer o2) {
+                double o1wonTimes = o1.getNumberOfGamesWon();
+                double o2wonTimes = o2.getNumberOfGamesWon();
+                double o1playTimes = o1.getNumberOfGamesPlayed();
+                double o2playTimes = o2.getNumberOfGamesPlayed();
+                double x = o1wonTimes*100/(o1playTimes>0?o1playTimes:1)-
+                        o2wonTimes*100/ (o2playTimes>0?o2playTimes:1);
+                if (command.equals("asc")){
+                    return x==0?0:x>0?1:-1;
+                }
+                return x==0?0:x>0?-1:1;
+            }
+        });
+        // Print less than 10 players
+        int maxLength = allPlayer.length>10?10:allPlayer.length;
+        for (int i=0;i<maxLength;i++){
+            NimPlayer p = allPlayer[i];
+            double winTimes = p.getNumberOfGamesWon();
+            int playTimes = p.getNumberOfGamesPlayed();
+            int winningRatio = (int) ((winTimes*100)/(playTimes>0?playTimes:1)+0.5);
+            String firstColumn = winningRatio + "%";
+            System.out.printf("%-5s", firstColumn);
+            System.out.println("| "+String.format("%02d",playTimes) + " games | "
+                    + p.getGivenName() + " " + p.getFamilyName());
+            }
+    }
+
+    /**
+     *  ranking all players alphabetically
+     * @return return all players which are ranked.
+     */
+    private NimPlayer[] rankingAlphabetically() {
+        NimPlayer[] allPlayer = new NimPlayer[playersSize];
+        System.arraycopy(players, 0, allPlayer, 0, playersSize);
+        Arrays.sort(allPlayer, new Comparator<NimPlayer>() {
+            @Override
+            public int compare(NimPlayer o1, NimPlayer o2) {
+                return (o1.getUsername().compareTo(o2.getUsername()));
+            }
+        });
+        return allPlayer;
+    }
+
+
+    /**
+     * start one game
+     * @throws InvalidNumberOfArgumentsException invalid number of arguments exception
+     */
+    private void startgGame() throws InvalidNumberOfArgumentsException{
+        String[] arguments = command.split(",");
+
+        if (arguments.length< 4 )
+            throw new InvalidNumberOfArgumentsException
+                    ("Incorrect number of arguments supplied to command.");
+
+        int initialNumber = Integer.parseInt(arguments[0]);
+        int upperBound = Integer.parseInt(arguments[1]);
+        String player1Name = arguments[2];
+        String player2Name = arguments[3];
+        int player1index = findPlayer(player1Name);
+        int player2index = findPlayer(player2Name);
+        if( player1index==-1 || player2index==-1){
+            System.out.println("One of the players does not exist.");
+            return;
+        }
+        System.out.println();
+        NimPlayer player1 = players[player1index];
+        NimPlayer player2 = players[player2index];
+        NimGame game = new OriginalNimGame(initialNumber,upperBound,
+                players[player1index],players[player2index]);
+        // update players' number of games played and number of games won
+        NimPlayer winner = game.oneGame(keyboard);
+        player1.setNumberOfGamesPlayed(player1.getNumberOfGamesPlayed()+1);
+        player2.setNumberOfGamesPlayed(player2.getNumberOfGamesPlayed()+1);
+        if (player1.equals(winner)){
+            player1.setNumberOfGamesWon(player1.getNumberOfGamesWon()+1);
+        }else{
+            player2.setNumberOfGamesWon(player2.getNumberOfGamesWon()+1);
+        }
+    }
+
+    /**
+     *  start one advanced game
+     * @throws InvalidNumberOfArgumentsException invalid number of arguments exception
+     */
+    private void startAdvancedGame() throws InvalidNumberOfArgumentsException{
+        String[] arguments = command.split(",");
+        if (arguments.length< 3 )
+            throw new InvalidNumberOfArgumentsException
+                    ("Incorrect number of arguments supplied to command.");
+
+        int initialNumber = Integer.parseInt(arguments[0]);
+        String player1Name = arguments[1];
+        String player2Name = arguments[2];
+        int player1index = findPlayer(player1Name);
+        int player2index = findPlayer(player2Name);
+        if( player1index==-1 || player2index==-1){
+            System.out.println("One of the players does not exist.");
+            return;
+        }
+        System.out.println();
+        NimPlayer player1 = players[player1index];
+        NimPlayer player2 = players[player2index];
+        NimGame game = new AdavancedNimGame(initialNumber,
+                       players[player1index],players[player2index]);
+
+        // update players' number of games played and number of games won
+        NimPlayer winner = game.oneGame(keyboard);
+        player1.setNumberOfGamesPlayed(player1.getNumberOfGamesPlayed()+1);
+        player2.setNumberOfGamesPlayed(player2.getNumberOfGamesPlayed()+1);
+        if (player1.equals(winner)){
+            player1.setNumberOfGamesWon(player1.getNumberOfGamesWon()+1);
+        }else{
+            player2.setNumberOfGamesWon(player2.getNumberOfGamesWon()+1);
+        }
+
+    }
+
+    /**
+     *  find player by username
+     * @param userName input by palyer
+     * @return return the index of player found, -1 means that do not find player.
+     */
+    private int findPlayer(String userName){
+        for (int i=0;i<players.length;i++){
+            if (players[i] == null){
+                return -1;
+            }else if(userName.equals(players[i].getUsername())){
+                return i;
+            }
+        }
+        return -1;
+    }
+}============================================
+src/NimHumanPlayer.java
+03:13:32_Friday_31_May_2019
+============================================
+import java.util.Scanner;
+
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: the NimHumanPlayer class extends NimPlayer,
+ *           and implements removeStone method,
+ *           this class adds own method called advancedMove.
+ * version:1.3
+ */
+public class NimHumanPlayer extends NimPlayer{
+
+    //constructor
+    public NimHumanPlayer(String username, String familyName, String givenName) {
+        this.username = username;
+        this.givenName = givenName;
+        this.familyName = familyName;
+    }
+
+    // remove stone for original NimGame
+    @Override
+    public int removeStone(Scanner keyboard, int currentStone, int upperBound) {
+        int num = Integer.parseInt(keyboard.nextLine());
+        return num;
+    }
+
+    /**
+     * advanced move for advanced game.
+     * @param keyboard used for player's input
+     * @param available available stones which can be moved
+     * @param lastMove the stones last player move
+     * @return return the stones which current player remove
+     * @throws InvalidMoveException invalid move exception will be thrown
+     */
+    @Override
+    public String advancedMove(Scanner keyboard,boolean[] available, String lastMove)
+            throws InvalidMoveException {
+        String stones = keyboard.nextLine();
+        int position = Integer.parseInt(stones.split(" ")[0]);
+        int count = Integer.parseInt(stones.split(" ")[1]);
+        // valid remove
+        if(position<1 || position>available.length || count<1 || count>2 ||
+                !available[position - 1])
+            throw new InvalidMoveException("Invalid move.");
+        if( count ==2 && position<available.length && !available[position])
+            throw new InvalidMoveException("Invalid move.");
+        if(count ==2 && position==available.length)
+            throw new InvalidMoveException("Invalid move.");
+        // remove
+        available[position-1] = false;
+        if (count ==2){
+            available[position] = false;
+        }
+        return stones;
+    }
+
+}============================================
+src/OriginalNimGame.java
+03:13:33_Friday_31_May_2019
+============================================
+import java.util.Scanner;
+
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: this class implements NimGame, and
+ *           player can play one game in one instance of OriginalNimGame class.
+ * version:1.3
+ */
+public class OriginalNimGame implements NimGame{
+
+    // current number of stones
+    private int currentStone;
+    // Upper bound of stone removal
+    private int upperBound;
+    // The first player
+    private NimPlayer player1;
+    // The second player
+    private NimPlayer player2;
+
+    public OriginalNimGame() {
+    }
+
+    public OriginalNimGame(int currentStone,int upperBound,NimPlayer player1,NimPlayer player2){
+        this.currentStone = currentStone;
+        this.upperBound = upperBound;
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+
+    /**
+     * one game
+     * @param keyboard used for inputting information by user
+     * @return return the winner when one game finished.
+     */
+    @Override
+    public NimPlayer oneGame(Scanner keyboard){
+        initialization();
+        return playGame(keyboard);
+    }
+
+    /**
+     * initialize the initial stone, maximum stone removal
+     * and two players' names.
+     */
+    private void initialization(){
+        System.out.println("Initial stone count: "+this.currentStone);
+        System.out.println("Maximum stone removal: "+this.upperBound);
+        System.out.println("Player 1: "+player1.getGivenName()+" "+player1.getFamilyName());
+        System.out.println("Player 2: "+player2.getGivenName()+" "+player2.getFamilyName());
+        System.out.println();
+    }
+
+    /**
+     *  Two players take turns to move the stone,
+     *  and the player who moves the last stone is the loser.
+     */
+    private NimPlayer playGame(Scanner keyboard){
+        NimPlayer currentPlayer = null;
+        // Two players take turns to move the stone
+        for (int i=0;currentStone>0;i++){
+            System.out.printf("%d stones left:", currentStone);
+            for (int j = 0; j < currentStone; j++) {
+                System.out.print(" *");
+            }
+            System.out.println();
+            // make sure who is current player
+            currentPlayer = i % 2 == 0 ? player1 : player2;
+            System.out.printf("%s\'s turn - remove how many?\n\n", currentPlayer.getGivenName());
+            int stoneremoved =removeAvailably(currentPlayer,keyboard);
+            currentStone -= stoneremoved;
+        }
+        //game over
+        System.out.println("Game Over");
+        System.out.printf("%s wins!", currentPlayer==player1?(player2.getGivenName()+" "+
+                player2.getFamilyName()):(player1.getGivenName()+" "+player1.getFamilyName()));
+        System.out.println();
+        return currentPlayer==player1?player2:player1;
+    }
+
+    /**
+     * make sure the number of stones players remove is reasonable
+     * @param player current player
+     * @param keyboard player input the number of stones that they remove
+     * @return the reasonable number of stones players remove
+     */
+    private int removeAvailably(NimPlayer player,Scanner keyboard){
+        int stoneRemoved=1;
+        boolean flag = false;
+        String message = "Invalid move. You must remove between 1 and " +
+                +(upperBound > currentStone ? currentStone : upperBound)
+                +" stones.";
+        while (!flag){
+            try {
+                stoneRemoved = player.removeStone(keyboard,currentStone,upperBound);
+                if (stoneRemoved>upperBound || stoneRemoved>currentStone || stoneRemoved< 1 ) {
+                    throw new InvalidMoveException(message);
+                }
+                flag = true;
+            }catch (InvalidMoveException e){
+                System.out.println(e.getMessage()+"\n");
+                printCurrentStone();
+                System.out.printf("%s\'s turn - remove how many?\n\n", player.getGivenName());
+            }catch (NumberFormatException e){
+                System.out.println(message+"\n");
+                printCurrentStone();
+                System.out.printf("%s\'s turn - remove how many?\n\n", player.getGivenName());
+            }
+        }
+        return stoneRemoved;
+    }
+
+    /**
+     * print current stones
+     */
+    private void printCurrentStone(){
+        System.out.printf("%d stones left:", currentStone);
+        for (int j = 0; j < currentStone; j++) {
+            System.out.print(" *");
+        }
+        System.out.println();
+    }
+}============================================
+src/AdavancedNimGame.java
+03:13:31_Friday_31_May_2019
+============================================
+import java.util.Scanner;
+
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: the AdvancedNimGame implements NimGame,
+ *           Players can play advanced game in oneGame method.
+ * version:1.3
+ */
+public class AdavancedNimGame implements NimGame {
+
+    // current number of stones
+    private int currentStone;
+    // The first player
+    private NimPlayer player1;
+    // The second player
+    private NimPlayer player2;
+    // the remaining stone
+    private boolean[] available;
+    // the stones last move
+    private String lastMove;
+
+    // constructor
+    public AdavancedNimGame(int currentStone,NimPlayer player1,NimPlayer player2){
+        this.currentStone = currentStone;
+        this.player1 = player1;
+        this.player2 = player2;
+        available = new boolean[currentStone];
+        for (int i=0;i<currentStone;i++){
+            available[i]= true;
+        }
+    }
+
+    /*
+       one game,
+       return winner when the game finished.
+       keyboard is used for inputting information by user
+     */
+    @Override
+    public NimPlayer oneGame(Scanner keyboard) {
+        initialization();
+        NimPlayer currentPlayer = null;
+        for (int i=0;currentStone>0;i++){
+            boolean flag = false;
+            while (!flag){
+                try {
+                    System.out.print(currentStone + " stones left: ");
+                    printStone();
+                    // make sure who is current player
+                    currentPlayer = i % 2 == 0 ? player1 : player2;
+                    System.out.printf("%s\'s turn - which to remove?\n\n",
+                            currentPlayer.getGivenName());
+                    lastMove=currentPlayer.advancedMove(keyboard,available,lastMove);
+                    flag = true;
+                }catch (InvalidMoveException e){ // invalid move Exception
+                    System.out.println(e.getMessage());
+                    System.out.println();
+                }
+            }
+            // calculate current stone
+            currentStone -= Integer.parseInt((lastMove.split(" "))[1]);
+        }
+        //game over
+        System.out.println("Game Over");
+        System.out.printf("%s wins!", currentPlayer==player1?(player1.getGivenName()+" "+
+                player1.getFamilyName()):(player2.getGivenName()+" "+player2.getFamilyName()));
+        System.out.println();
+        return currentPlayer==player1?player1:player2;
+    }
+
+    // initilization
+    private void initialization(){
+        currentStone =available.length;
+        System.out.println("Initial stone count: "+this.currentStone);
+        System.out.print("Stones display: ");
+        printStone();
+        System.out.println("Player 1: "+player1.getGivenName()+" "+player1.getFamilyName());
+        System.out.println("Player 2: "+player2.getGivenName()+" "+player2.getFamilyName());
+        System.out.println();
+    }
+
+    // print all the stones
+    private void printStone(){
+        for (int i=0;i<available.length;i++){
+            System.out.print("<"+(i+1)+","+(available[i]?"*":"x")+">");
+            if(i != available.length-1){
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+    }
+}
+============================================
+src/InvalidMoveException.java
+03:13:31_Friday_31_May_2019
+============================================
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: when the player input invalid move,
+ *           one instance of InvalidMoveException will be thrown.
+ * version:1.3
+ */
+public class InvalidMoveException extends Exception{
+    public InvalidMoveException() {
+    }
+
+    public InvalidMoveException(String message) {
+        super(message);
+    }
+}
+============================================
+src/NimGame.java
+03:13:31_Friday_31_May_2019
+============================================
+import java.util.Scanner;
+
+/**
+ * Author:zhiyuan yao
+ * StudentId: 1012228
+ * Time:2019/5/7 13:29
+ * Describe: NimGame is an interface, two classes
+ *           OriginalNimGame and AdvancedNimGame implements
+ *           this interface.
+ * version:1.3
+ */
+public interface NimGame {
+    public NimPlayer oneGame(Scanner keyboard);
+}
